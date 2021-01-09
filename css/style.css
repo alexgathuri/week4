@@ -33,5 +33,28 @@ input:focus {
 }
 .search{
     text-align: center;
+    padding: 1%;
 
 }
+ .form{
+
+
+ }
+
+ .smallmenu{
+     padding: 0%;
+     background-color: whitesmoke;
+    
+ }
+ .smenu{
+    float: left;
+    width: 33%;
+    padding: 1%;
+    list-style-type: none;
+    background-color: grey;
+ }
+
+ .smenu:hover {
+    color: white;
+    cursor: pointer;
+ }
