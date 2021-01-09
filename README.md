@@ -16,7 +16,7 @@ Alex Gathuri
     `git clone https://github.com/alexgathuri/week4.git`
 
 1. Switch into the directory
-    `cd week3`
+    `cd week4`
 
 1. Run the launch command
     `run`
@@ -30,7 +30,7 @@ Alex Gathuri
 
 # Live link
 
-Week4 Live Link: [alexgathuri/week3](https://alexgathuri.github.io/week4/)
+Week4 Live Link: [alexgathuri/week4](https://alexgathuri.github.io/week4/)
 
 # Contact information
 * Email: [Email](mailto:gathurialex4@gmail.com)
