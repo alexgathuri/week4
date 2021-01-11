@@ -4,7 +4,7 @@
     <head>
         <link rel="stylesheet" href="../week4/css/style.css" >
         <link rel="stylesheet" href="../week4/css/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
-        <script src="../week4/java/script.js"></script>
+        <script type="text/javascript" src="../week4/java/script.js"></script>
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         
@@ -14,7 +14,7 @@
 
         <div class="search">
             <h1 class="searchhere">You can search here</h1>
-            <input class="input1" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search..." title="Type in a name">
+            <input class="input1" type="text" id="myInput" onkeyup="display()" placeholder="Search..." title="Type in a name">
 
         </div>
         
@@ -40,25 +40,25 @@
                 <li class="li">
                     <img class="image" src="../week4/static/pizza/hawaiian.jpeg">
                     <p class="pname" > Hawaiian</p>
-                   
-
-
-
                     <button class="addbtn" id="myBtn">ADD</button>
+
+
+
+                    
 
 
 <div id="myModal" class="modal">
 
   <div class="modal-content">
     <span class="close">&times;</span>
-    <form>
+    <form id="form">
         <p>Please select the size of your pizza:</p>
-        <input type="radio" id="small" name="size" value="small" required>
-        <label for="small">Small</label><br>
-        <input type="radio" id="medium" name="size" value="medium" required>
-        <label for="medium">Medium</label><br>
-        <input type="radio" id="Large" name="size" value="large" required>
-        <label for="large">Large</label><br><br>
+        <input type="radio" id="small" name="size" value="small" required>Small
+        <br>
+        <input type="radio" id="medium" name="size" value="medium" required>Medium
+        <br>
+        <input type="radio" id="large" name="size" value="large" required>Large
+        <br><br>
 
 
 
@@ -78,7 +78,16 @@
         <input type="radio" id="stuffed" name="crust" value="stuffed" required>
         <label for="stuffed">Stuffed</label><br>
         <input type="radio" id="gluten" name="crust" value="gluten" required>
-        <label for="gluten">Gluten-free</label><br><br>
+        <label for="gluten">Gluten-free</label><br><br><br>
+
+
+
+
+        <button class="cart">Add another order</button>
+        <button class="submit" onclick="display()" >SUBMIT</button>
+        <br><br>
+
+        
 
 
 
@@ -98,17 +107,20 @@
                 <li class="li">
                     <img class="image" src="../week4/static/pizza/meatdlx.jpeg">
                     <p class="pname" > Meat delux</p>
+                    <button class="addbtn" id="myBtn">ADD</button>
                     
                 </li>
 
                 <li class="li">
                     <img class="image" src="../week4/static/pizza/bbq.jpeg">
                     <p class="pname" > Barbaque</p>
+                    <button class="addbtn" id="myBtn">ADD</button>
                 </li>
 
                 <li class="li">
                     <img class="image" src="../week4/static/pizza/chicken p.jpeg">
                     <p class="pname" > Chicken periperi</p>
+                    <button class="addbtn" id="myBtn">ADD</button>
                 </li>
 
                
@@ -127,7 +139,7 @@
         </table>
  
 
-
+<button onclick="submit()" >click</button>
 
     </body>
    
@@ -152,6 +164,18 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+var size = documnet.getElementsByName('size').value;
+function display(){
+    alert(size);
+
+
+}
+   
+
+
+
+
 
 </script>
     

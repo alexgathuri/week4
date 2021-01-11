@@ -17,3 +17,12 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+var size = documnet.getElementById("size").value;
+function submit(){
+    
+    documnet.getElementById("size").innerHTML=size;
+}
+
+
+
