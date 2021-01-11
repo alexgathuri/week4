@@ -105,14 +105,14 @@
      text-align: center;
      
  }
- .add{
-     float: right;
+ .addbtn{
+  
     
      border: 2px solid #4CAF50;
 
  }
 
- .add:hover{
+ .addbtn:hover{
      color: white;
      background-color:rgb(24, 151, 145);
      
