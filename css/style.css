@@ -4,6 +4,7 @@
     height:70px;
     background-color:whitesmoke ;
     text-align: center;
+    padding: 1%;
 
 
 }
@@ -19,7 +20,7 @@
 }
 
 
-input {
+.input1 {
     width: 130px;
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -31,7 +32,7 @@ input {
     padding: 12px 20px 12px 40px;
     transition: width 0.4s ease-in-out;
 }
-input:focus {
+.input1:focus {
     width: 30%;
 
 }
@@ -59,23 +60,28 @@ input:focus {
  }
  .smenu{
     float: left;
-    width: 33%;
+    width: 25%;
     padding: 1%;
     list-style-type: none;
-    background-color: grey;
+    background-color: whitesmoke;
+    text-align: center;
+ }
+
+ .smenu:hover{
+    background-color: rgb(30, 113, 119);
  }
 
  .smenu:hover {
     color: white;
     cursor: pointer;
  }
- .category{
-     list-style-type: none;
-     
- }
+
 
  .pname{
      float: left;
+     padding: 10%;
+     font-family: cursive;
+
  }
 
  .li{
@@ -83,11 +89,71 @@ input:focus {
      background-color: whitesmoke;
      width: 80%;
  }
+ .image{
+
+
+ }
+ 
  .category{
      background-image: url("../static/images/background.jpg");
+     list-style-type: none;
      
  }
 
  .cat{
      color: white;
+     text-align: center;
+     
  }
+ .add{
+     float: right;
+    
+     border: 2px solid #4CAF50;
+
+ }
+
+ .add:hover{
+     color: white;
+     background-color:rgb(24, 151, 145);
+     
+    
+    
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
