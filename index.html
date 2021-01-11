@@ -3,16 +3,18 @@
 <html> 
     <head>
         <link rel="stylesheet" href="../week4/css/style.css" >
-        <link rel="stylesheet" href="../week3/Css/bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../week4/css/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
+        <script src="../week4/java/script.js"></script>
 
-
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        
     </head> 
 
     <body>
 
         <div class="search">
             <h1 class="searchhere">You can search here</h1>
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search..." title="Type in a name">
+            <input class="input1" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search..." title="Type in a name">
 
         </div>
         
@@ -44,6 +46,12 @@
                 <li class="smenu">
                     <p>Sides</p>
                 </li>
+
+                <li class="smenu">
+                    <p>Drink</p>
+                </li>
+
+
             </ul>
         </table>
 
@@ -52,6 +60,37 @@
                 <li class="li">
                     <img class="image" src="../week4/static/pizza/hawaiian.jpeg">
                     <p class="pname" > Hawaiian</p>
+                   
+
+
+
+                    <button id="myBtn">ADD</button>
+
+
+<div id="myModal" class="modal">
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form>
+        <p>Please select the size of your pizza:</p>
+        <input type="radio" id="small" name="size" value="small">
+        <label for="small">Small </label><br>
+        <input type="radio" id="medium" name="size" value="medium">
+        <label for="medium">Medium</label><br>
+        <input type="radio" id="Large" name="size" value="large">
+        <label for="large">Large</label>
+        </form>
+  </div>
+
+</div>
+
+
+                </li>
+
+                <li class="li">
+                    <img class="image" src="../week4/static/pizza/hawaiian.jpeg">
+                    <p class="pname" > Hawaiian</p>
+                    
                 </li>
 
                 <li class="li">
@@ -59,17 +98,12 @@
                     <p class="pname" > Hawaiian</p>
                 </li>
 
-                
                 <li class="li">
                     <img class="image" src="../week4/static/pizza/hawaiian.jpeg">
                     <p class="pname" > Hawaiian</p>
                 </li>
 
-                
-                <li class="li">
-                    <img class="image" src="../week4/static/pizza/hawaiian.jpeg">
-                    <p class="pname" > Hawaiian</p>
-                </li>
+               
 
                 
 
@@ -83,15 +117,35 @@
 
 
         </table>
-    
-
+ 
 
 
 
     </body>
    
 
+<script>
+var modal = document.getElementById("myModal");
 
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+</script>
     
 
 </html>
