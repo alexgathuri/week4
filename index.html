@@ -33,27 +33,7 @@
         
 
 
-        <table class="form">
-            <ul class="smallmenu">
-                <li class="smenu">
-                    <p>Pizza</p>
-                </li>
-
-                <li class="smenu">
-                    <p>Topping</p>
-                </li>
-
-                <li class="smenu">
-                    <p>Sides</p>
-                </li>
-
-                <li class="smenu">
-                    <p>Drink</p>
-                </li>
-
-
-            </ul>
-        </table>
+       
 
         <table>
             <ul class="category" > <p class="cat"><b>Pizza<b></p> 
@@ -64,7 +44,7 @@
 
 
 
-                    <button id="myBtn">ADD</button>
+                    <button class="addbtn" id="myBtn">ADD</button>
 
 
 <div id="myModal" class="modal">
@@ -73,12 +53,40 @@
     <span class="close">&times;</span>
     <form>
         <p>Please select the size of your pizza:</p>
-        <input type="radio" id="small" name="size" value="small">
-        <label for="small">Small </label><br>
-        <input type="radio" id="medium" name="size" value="medium">
+        <input type="radio" id="small" name="size" value="small" required>
+        <label for="small">Small</label><br>
+        <input type="radio" id="medium" name="size" value="medium" required>
         <label for="medium">Medium</label><br>
-        <input type="radio" id="Large" name="size" value="large">
-        <label for="large">Large</label>
+        <input type="radio" id="Large" name="size" value="large" required>
+        <label for="large">Large</label><br><br>
+
+
+
+        <p>Please select the topping if you desire</p>
+        <input type="radio" id="cheese" name="topping" value="cheese" required>
+        <label for="cheese">Cheese </label><br>
+        <input type="radio" id="chicken" name="topping" value="cheese" required>
+        <label for="chicken">Chicken</label><br>
+        <input type="radio" id="none" name="topping" value="none" required>
+        <label for="none">None</label><br><br>
+
+
+
+        <p>Please select the Crust you desire</p>
+        <input type="radio" id="crispy" name="crust" value="crispy" required>
+        <label for="crispy">Crispy </label><br>
+        <input type="radio" id="stuffed" name="crust" value="stuffed" required>
+        <label for="stuffed">Stuffed</label><br>
+        <input type="radio" id="gluten" name="crust" value="gluten" required>
+        <label for="gluten">Gluten-free</label><br><br>
+
+
+
+
+
+
+
+
         </form>
   </div>
 
@@ -88,19 +96,19 @@
                 </li>
 
                 <li class="li">
-                    <img class="image" src="../week4/static/pizza/hawaiian.jpeg">
-                    <p class="pname" > Hawaiian</p>
+                    <img class="image" src="../week4/static/pizza/meatdlx.jpeg">
+                    <p class="pname" > Meat delux</p>
                     
                 </li>
 
                 <li class="li">
-                    <img class="image" src="../week4/static/pizza/hawaiian.jpeg">
-                    <p class="pname" > Hawaiian</p>
+                    <img class="image" src="../week4/static/pizza/bbq.jpeg">
+                    <p class="pname" > Barbaque</p>
                 </li>
 
                 <li class="li">
-                    <img class="image" src="../week4/static/pizza/hawaiian.jpeg">
-                    <p class="pname" > Hawaiian</p>
+                    <img class="image" src="../week4/static/pizza/chicken p.jpeg">
+                    <p class="pname" > Chicken periperi</p>
                 </li>
 
                
