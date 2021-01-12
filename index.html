@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 
 <html> 
-    <head>
+    <head>  
+        <title>Week 4</title>
+
+
+
+
         <link rel="stylesheet" href="../week4/css/style.css" >
         <link rel="stylesheet" href="../week4/css/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
         <script type="text/javascript" src="../week4/java/script.js"></script>
@@ -37,77 +42,29 @@
 
         <table>
             <ul class="category" > <p class="cat"><b>Pizza<b></p> 
+
+
                 <li class="li">
                     <img class="image" src="../week4/static/pizza/hawaiian.jpeg">
                     <p class="pname" > Hawaiian</p>
                     <button class="addbtn" id="myBtn">ADD</button>
 
 
+                </li>
 
-                    
-
-
-<div id="myModal" class="modal">
-
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <form id="form">
-        <p>Please select the size of your pizza:</p>
-        <input type="radio" id="small" name="size" value="small" required>Small
-        <br>
-        <input type="radio" id="medium" name="size" value="medium" required>Medium
-        <br>
-        <input type="radio" id="large" name="size" value="large" required>Large
-        <br><br>
-
-
-
-        <p>Please select the topping if you desire</p>
-        <input type="radio" id="cheese" name="topping" value="cheese" required>
-        <label for="cheese">Cheese </label><br>
-        <input type="radio" id="chicken" name="topping" value="cheese" required>
-        <label for="chicken">Chicken</label><br>
-        <input type="radio" id="none" name="topping" value="none" required>
-        <label for="none">None</label><br><br>
-
-
-
-        <p>Please select the Crust you desire</p>
-        <input type="radio" id="crispy" name="crust" value="crispy" required>
-        <label for="crispy">Crispy </label><br>
-        <input type="radio" id="stuffed" name="crust" value="stuffed" required>
-        <label for="stuffed">Stuffed</label><br>
-        <input type="radio" id="gluten" name="crust" value="gluten" required>
-        <label for="gluten">Gluten-free</label><br><br><br>
-
-
-
-
-        <button class="cart">Add another order</button>
-        <button class="submit" onclick="display()" >SUBMIT</button>
-        <br><br>
-
-        
-
-
-
-
-
-
-
-
-        </form>
-  </div>
-
-</div>
+                <li class="li">
+                    <img class="image" src="../week4/static/pizza/hawaiian.jpeg">
+                    <p class="pname" > Hawaiian</p>
+                    <button class="addbtn" id="myBtn">ADD</button>
 
 
                 </li>
 
+
                 <li class="li">
                     <img class="image" src="../week4/static/pizza/meatdlx.jpeg">
                     <p class="pname" > Meat delux</p>
-                    <button class="addbtn" id="myBtn">ADD</button>
+                     <button class="addbtn" id="myBtn">ADD</button>
                     
                 </li>
 
@@ -122,6 +79,15 @@
                     <p class="pname" > Chicken periperi</p>
                     <button class="addbtn" id="myBtn">ADD</button>
                 </li>
+                    
+
+
+
+
+
+                
+
+                
 
                
 
@@ -139,7 +105,82 @@
         </table>
  
 
-<button onclick="submit()" >click</button>
+        <div id="myModal" class="modal">
+
+            <div class="modal-content">
+              <span class="close">&times;</span>
+
+              <label>Please select the size of your pizza:</label>
+
+              <select id="form">
+                  <option  id="size" name ="size" value="500" required>Small</option>
+                  <br>
+                  <option id="size" name ="size" value="750" required>Medium</option>
+                  <br>
+                  <option  id="size" name ="size" value="1000" required>Large</option>
+                 
+                </select>
+                <br><br><br><br>
+
+                <label>Please select the topping you desire</label>
+
+              <select id="form">
+                  <option id="top" name ="size" value="0" required>none</option>
+                  <br>
+                  <option id="top" name ="size" value="200" required>chicken</option>
+                  <br>
+                  <option  id="top" name ="size" value="150" required>cheese</option>
+                 
+                </select>
+                <br><br><br><br>
+
+                <label>Please select the crust you desire:</label>
+
+              <select id="form">
+                  <option id="crust"  value="200" required>stuffed</option>
+                  
+                  <option id="crust"  value="100" required>gluten-free</option>
+                  
+                  <option  id="crust" value="150" required>crispy</option>
+                  
+                </select>
+                <br><br><br><br>
+
+                <label>Would you like your food to be delivered?:</label>
+
+                <select id="form">
+                    <option id="deliver" name ="size" value="200" required>yes</option>
+                    <br>
+                    <option id="deliver" name ="size" value="0" required>no</option>
+                    <br>
+                    
+                    
+                  </select>
+                  <br><br><br><br>
+
+          
+                  
+          
+          
+          
+          
+                  <button class="cart">Add another order</button>
+                  <button class="submit" onclick="display()" >SUBMIT</button>
+                  <br><br>
+          
+                  
+          
+          
+          
+          
+          
+          
+          
+          
+                  </form>
+            </div>
+          
+          </div>
 
     </body>
    
@@ -165,13 +206,26 @@ window.onclick = function(event) {
   }
 }
 
-var size = documnet.getElementsByName('size').value;
-function display(){
-    alert(size);
 
 
-}
-   
+
+
+    function display(){
+        var size = document.getElementById("size").value;
+        var top = document.getElementById("top").value;
+        var crust = document.getElementById("crust").value;
+        alert(crust);
+
+
+
+
+
+
+
+    }
+
+
+
 
 
 
