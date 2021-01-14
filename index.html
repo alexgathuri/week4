@@ -17,11 +17,7 @@
 
     <body>
 
-        <div class="search">
-            <h1 class="searchhere">You can search here</h1>
-            <input class="input1" type="text" id="myInput" onkeyup="display()" placeholder="Search..." title="Type in a name">
-
-        </div>
+        
         
 
 
@@ -46,39 +42,13 @@
 
                 <li class="li">
                     <img class="image" src="../week4/static/pizza/hawaiian.jpeg">
-                    <p class="pname" > Hawaiian</p>
+                    <p class="pname" > Add a pizza</p>
                     <button class="addbtn" id="myBtn">ADD</button>
 
 
                 </li>
 
-                <li class="li">
-                    <img class="image" src="../week4/static/pizza/hawaiian.jpeg">
-                    <p class="pname" > Hawaiian</p>
-                    <button class="addbtn" id="myBtn">ADD</button>
-
-
-                </li>
-
-
-                <li class="li">
-                    <img class="image" src="../week4/static/pizza/meatdlx.jpeg">
-                    <p class="pname" > Meat delux</p>
-                     <button class="addbtn" id="myBtn">ADD</button>
-                    
-                </li>
-
-                <li class="li">
-                    <img class="image" src="../week4/static/pizza/bbq.jpeg">
-                    <p class="pname" > Barbaque</p>
-                    <button class="addbtn" id="myBtn">ADD</button>
-                </li>
-
-                <li class="li">
-                    <img class="image" src="../week4/static/pizza/chicken p.jpeg">
-                    <p class="pname" > Chicken periperi</p>
-                    <button class="addbtn" id="myBtn">ADD</button>
-                </li>
+               
                     
 
 
@@ -110,13 +80,24 @@
             <div class="modal-content">
               <span class="close">&times;</span>
 
+
+              <label>Please select your pizza:</label>
+
+              <select id="type1">
+                  <option  id="type" name ="type" value="hawaiian" required>hawaiian</option>
+                  <br>
+                  <option id="type" name ="type" value="meat delux" required>Meat delux</option>
+                  <br>
+                  <option  id="type" name ="type" value="chicken pizza" required>chicken pizza</option>
+                 
+                </select>
+                <br><br><br><br>
+
               <label>Please select the size of your pizza:</label>
 
-              <select id="form">
+              <select id="size1">
                   <option  id="size" name ="size" value="500" required>Small</option>
-                  <br>
                   <option id="size" name ="size" value="750" required>Medium</option>
-                  <br>
                   <option  id="size" name ="size" value="1000" required>Large</option>
                  
                 </select>
@@ -124,7 +105,7 @@
 
                 <label>Please select the topping you desire</label>
 
-              <select id="form">
+              <select id="top1">
                   <option id="top" name ="size" value="0" required>none</option>
                   <br>
                   <option id="top" name ="size" value="200" required>chicken</option>
@@ -136,7 +117,7 @@
 
                 <label>Please select the crust you desire:</label>
 
-              <select id="form">
+              <select id="crust1">
                   <option id="crust"  value="200" required>stuffed</option>
                   
                   <option id="crust"  value="100" required>gluten-free</option>
@@ -148,7 +129,7 @@
 
                 <label>Would you like your food to be delivered?:</label>
 
-                <select id="form">
+                <select id="deliver1">
                     <option id="deliver" name ="size" value="200" required>yes</option>
                     <br>
                     <option id="deliver" name ="size" value="0" required>no</option>
@@ -164,7 +145,7 @@
           
           
           
-                  <button class="cart">Add another order</button>
+                  
                   <button class="submit" onclick="display()" >SUBMIT</button>
                   <br><br>
           
@@ -211,18 +192,39 @@ window.onclick = function(event) {
 
 
     function display(){
-        var size = document.getElementById("size").value;
-        var top = document.getElementById("top").value;
-        var crust = document.getElementById("crust").value;
-        alert(crust);
+        var type = document.getElementById("type1").value;
+        var size = document.getElementById("size1").value;
+        var top = document.getElementById("top1").value;
+        var crust = document.getElementById("crust1").value;
+        var deliver = document.getElementById("deliver1").value;
+
+        
+        var size = parseInt (size);
+        var top = parseInt (top);
+        var crust = parseInt (crust);
+        var deliver = parseInt (deliver);
+        var total = size+top+crust+deliver;
+
+        alert("You have ordered "+ type );
+        alert("The price for "+type +"is Ksh"+ size);
+        alert("Crust price is ksh "+ crust);
+        alert("Topping price is ksh"+ top);
+        alert("Delivery price is ksh"+ deliver);
+        alert("The total price will be KSH "+ total);
 
 
-
-
-
-
-
+       
     }
+
+        
+
+
+
+
+
+
+
+    
 
 
 
